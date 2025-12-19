@@ -1,0 +1,24 @@
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+local gui = Instance.new("ScreenGui")
+gui.Name = "QuitGui"
+gui.ResetOnSpawn = false
+gui.Parent = player:WaitForChild("PlayerGui")
+
+local button = Instance.new("ImageButton")
+button.Parent = gui
+button.Size = UDim2.new(0,36,0,36)
+button.Position = UDim2.new(1,-50,0,12)
+button.BackgroundColor3 = Color3.fromRGB(200,40,40)
+button.Image = "rbxassetid://6031094678"
+button.ImageColor3 = Color3.fromRGB(255,255,255)
+button.AutoButtonColor = true
+
+local corner = Instance.new("UICorner")
+corner.CornerRadius = UDim.new(1,0)
+corner.Parent = button
+
+button.MouseButton1Click:Connect(function()
+	player:Kick("Thoát game")
+end)
