@@ -20,5 +20,5 @@ corner.CornerRadius = UDim.new(1,0)
 corner.Parent = button
 
 button.MouseButton1Click:Connect(function()
-	player:Kick("Thoát game")
+	player:Kick("aVudz đã stole")
 end)
